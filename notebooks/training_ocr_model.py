@@ -453,46 +453,6 @@ model_details = mlflow.register_model(model_uri=custom_model_uri, name=model_nam
 
 # COMMAND ----------
 
-
-
-# COMMAND ----------
-
-
-
-# COMMAND ----------
-
-# from transformers import pipeline
-# from mlflow.models.signature import infer_signature
-# import pickle 
-# import mlflow
-# model_output_dir = "./julie_hugging_face_model"
-# pipeline_output_dir = "./julie_hugging_face_model_pipeline"
-# model_artifact_path = "julie_hugging_face_model_artifact"
-
-# MLFLOW_FLATTEN_PARAMS = True
-
-# # Start training
-# with mlflow.start_run() as run:
-#     run_id = run.info.run_id
-    
-#     #trainer.train()
-
-# #     mlflow.pytorch.log_model(trainer.model, artifact_path="pytorch-model", pickle_module=pickle)
-# #     pytorch_model_uri = f"runs:/{run_id}/pytorch-model"
-# #     artifacts = {"pytorch_model": pytorch_model_uri}
-    
-# #     mlflow.pyfunc.log_model(artifacts=artifacts, python_model=CustomHuggingFaceModel(), artifact_path=model_artifact_path)
-
-#     dbutils.fs.rm("file:/databricks/driver/pytorch-model", True)
-#     mlflow.pytorch.save_model(pytorch_model=trainer.model, path="pytorch-model", pickle_module=pickle)
-
-#     artifacts = {"pytorch_model": "./pytorch-model"}
-#     mlflow.pyfunc.log_model(artifacts=artifacts, python_model=CustomHuggingFaceModel(), artifact_path=model_artifact_path, input_example=df_url)
-#     #mlflow.log_metrics(trainer.evaluate())
-    
-
-# COMMAND ----------
-
 # MAGIC %md
 # MAGIC ## Testing Model Wrapper Input
 
@@ -504,7 +464,5 @@ logged_model = 'runs:/9587f647ae6b47f3abd2055ab2eac2c3/julie_hugging_face_model_
 # Load model as model
 loaded_model_class = mlflow.pyfunc.load_model(model_uri=logged_model)
 #loaded_model_class.predict(df_url)
-
-# COMMAND ----------
 
 
