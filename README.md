@@ -1,4 +1,4 @@
-# ICDAR 2019 Robust Reading Challenge on Scanned Receipts OCR and Information Extraction
+# Scanned Receipts OCR and Information Extraction
 
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
@@ -13,7 +13,7 @@ This dataset is mainly about Optical Character Recognition and information extra
 
 The dataset has 1000 whole scanned receipt images. Each receipt image contains around about four key text fields, such as goods name, unit price and total cost, etc. The text annotated in the dataset mainly consists of digits and English characters. An example scanned receipt is shown below:
 
-<div align=center><img src="media/data_sample.jpg" width="300"/></div>
+<div align=center><img src="Media/data_sample.jpg" width="300"/></div>
 
 The dataset is split into a training/validation set (“trainval”) and a test set (“test”). The “trainval” set consists of 600 receipt images, the “test” set consists of 400 images.
 
